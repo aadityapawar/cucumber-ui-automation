@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Framework-UI.iml" filepath="$PROJECT_DIR$/.idea/Framework-UI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ea/ea-cdr-dashboard/.idea/ea-cdr-dashboard.iml" filepath="$PROJECT_DIR$/../ea/ea-cdr-dashboard/.idea/ea-cdr-dashboard.iml" />
     </modules>
   </component>
 </project>

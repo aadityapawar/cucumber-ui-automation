@@ -1,12 +1,18 @@
 import {Given} from "@cucumber/cucumber";
 import {ScenarioWorld} from "./setup/world";
+import {PageId} from "../../env/global";
+import {navigateToPage} from "../support/navigation-behavior";
 
 Given(
-    /^I am on the "([^"]*)" app page$/, async function ( this: ScenarioWorld, pageId: string) {
+    /^I am on the "([^"]*)" page$/, async function ( this: ScenarioWorld, pageId: PageId) {
         const {
-            screen: { driver }
+            screen: { driver },
+            globalVariables,
+            globalConfig
         } = this
         console.log(`I am on ${pageId} page`)
-        await driver.get('https://facebook.com/')
+        globalVariables.currentScreen = pageId
+
+        await navigateToPage(driver, pageId, globalConfig)
     }
 )
